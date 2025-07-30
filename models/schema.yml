@@ -70,6 +70,11 @@ sources:
             description: impression
           - name: click
             description: click
+        tests:
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
 
       - name: bing
         identifier: raw_gz_bing
@@ -89,6 +94,11 @@ sources:
             description: impression
           - name: click
             description: click
+        tests:
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
 
       - name: criteo
         identifier: raw_gz_criteo
@@ -108,6 +118,11 @@ sources:
             description: impression
           - name: click
             description: click
+        tests:
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
 
       - name: facebook
         identifier: raw_gz_facebook
@@ -127,3 +142,33 @@ sources:
             description: impression
           - name: click
             description: click
+        tests:
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
+
+models:
+      - name: campaigns
+        identifier: int_campaigns
+        description: campaing truc
+        columns:
+          - name: date_date
+            description: data
+          - name: paid_source
+            description: dource
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name
+          - name: ads_cost
+            description: ads cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+        tests:
+            - not_null:
+              column_name: "(date_date || '-' || campaign_key)"
+            - unique:
+              column_name: "(date_date || '-' || campaign_key)"
