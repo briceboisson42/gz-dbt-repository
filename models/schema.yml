@@ -51,3 +51,79 @@ sources:
               column_name: orders_id
           - not_null:
               column_name: orders_id
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords
+        columns:
+          - name: date_date
+            description: date
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name
+          - name: ads_cost
+            description: adcost
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: table de bing data
+        columns:
+          - name: date_date
+            description: date
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name
+          - name: ads_cost
+            description: ads cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo table
+        columns:
+          - name: date_date
+            description: date
+          - name: paid_source
+            description: paid source
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name
+          - name: ads_cost
+            description: ads cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook table
+        columns:
+          - name: date_date
+            description: data
+          - name: paid_source
+            description: dource
+          - name: campaign_key
+            description: key
+          - name: camPGN_name
+            description: name
+          - name: ads_cost
+            description: ads cost
+          - name: impression
+            description: impression
+          - name: click
+            description: click
